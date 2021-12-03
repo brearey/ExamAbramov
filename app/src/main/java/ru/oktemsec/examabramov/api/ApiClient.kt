@@ -7,6 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.converter.gson.GsonConverterFactory
 import ru.oktemsec.examabramov.interfaces.LoginService
+import ru.oktemsec.examabramov.interfaces.RegisterService
 
 class ApiClient {
     private fun getRetrofit(): Retrofit {
@@ -30,5 +31,9 @@ class ApiClient {
 
     fun getLogin(): LoginService {
         return getRetrofit().create(LoginService::class.java)
+    }
+
+    fun getRegister(): RegisterService {
+        return getRetrofit().create(RegisterService::class.java)
     }
 }

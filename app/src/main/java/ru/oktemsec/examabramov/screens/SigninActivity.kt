@@ -50,12 +50,13 @@ class SigninActivity : AppCompatActivity() {
                 ShowArlertDialogWindow("Введите корректную электронную почту")
             }
             else {
-                ShowArlertDialogWindow("Все норм")
+                Toast.makeText(this@SigninActivity, "Все норм", Toast.LENGTH_LONG).show()
                 loginUser()
             }
         }
     }
 
+    //Функция вход пользователя
     private fun loginUser() {
         val loginRequest: LoginRequest = LoginRequest(etEmailIn.text.toString(), etPassIn.text.toString())
         val apiClient:ApiClient = ApiClient()
@@ -86,6 +87,7 @@ class SigninActivity : AppCompatActivity() {
         })
     }
 
+    //Функция вывода диалогового окна с сообщением
     private fun ShowArlertDialogWindow(message: String) {
         let {
             val builder = AlertDialog.Builder(it)
