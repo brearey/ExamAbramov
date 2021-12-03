@@ -10,8 +10,9 @@ class LaunchScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launch_screen)
 
+        //Переход в окно входа
         Handler().postDelayed({
-            val intent: Intent = Intent(this, MainActivity::class.java)
+            val intent: Intent = Intent(this, SigninActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
