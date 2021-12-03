@@ -16,6 +16,7 @@ import ru.oktemsec.examabramov.R
 import ru.oktemsec.examabramov.api.ApiClient
 import ru.oktemsec.examabramov.models.LoginRequest
 import ru.oktemsec.examabramov.models.LoginResponse
+import java.util.*
 
 class SigninActivity : AppCompatActivity() {
 
@@ -58,7 +59,7 @@ class SigninActivity : AppCompatActivity() {
 
     //Функция вход пользователя
     private fun loginUser() {
-        val loginRequest: LoginRequest = LoginRequest(etEmailIn.text.toString(), etPassIn.text.toString())
+        val loginRequest: LoginRequest = LoginRequest(etEmailIn.text.toString().lowercase(Locale.getDefault()), etPassIn.text.toString().lowercase(Locale.getDefault()))
         val apiClient:ApiClient = ApiClient()
         val loginResponseCall: Call<LoginResponse> = apiClient.getLogin().loginUser(loginRequest)
 

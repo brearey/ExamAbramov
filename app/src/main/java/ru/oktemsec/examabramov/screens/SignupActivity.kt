@@ -18,6 +18,7 @@ import ru.oktemsec.examabramov.models.LoginRequest
 import ru.oktemsec.examabramov.models.LoginResponse
 import ru.oktemsec.examabramov.models.RegisterRequest
 import ru.oktemsec.examabramov.models.RegisterResponse
+import java.util.*
 
 class SignupActivity : AppCompatActivity() {
 
@@ -66,10 +67,11 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
+    //Функция регистрации нового пользователя
     private fun registerUser() {
         val registerRequest: RegisterRequest = RegisterRequest(
-            etEmail.text.toString(),
-            etPassword.text.toString(),
+            etEmail.text.toString().lowercase(Locale.getDefault()),
+            etPassword.text.toString().lowercase(Locale.getDefault()),
             etFirstName.text.toString(),
             etSecname.text.toString()
         )
