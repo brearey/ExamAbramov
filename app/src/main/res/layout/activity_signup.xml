@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".SignupActivity">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_wc" />
+
+        <EditText
+            android:id="@+id/et_first_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Имя"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColor="@color/hint_color"
+            android:textColorHint="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/et_second_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Фамилия"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColor="@color/hint_color"
+            android:textColorHint="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_first_name" />
+
+        <EditText
+            android:id="@+id/et_email_reg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:textColor="@color/hint_color"
+            android:textColorHint="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_second_name" />
+
+        <EditText
+            android:id="@+id/et_pass_reg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textColor="@color/hint_color"
+            android:textColorHint="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email_reg" />
+
+        <EditText
+            android:id="@+id/et_repass_reg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Повторите пароль"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textColor="@color/hint_color"
+            android:textColorHint="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_pass_reg" />
+
+        <Button
+            android:id="@+id/btn_signup_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/btn_color"
+            android:fontFamily="@font/roboto"
+            android:padding="13dp"
+            android:text="Зарегистрироваться"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_repass_reg" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_i_have"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:fontFamily="@font/roboto"
+            android:padding="13dp"
+            android:textColor="@color/btn_color"
+            android:text="У меня уже есть аккаунт"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_signup_reg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
