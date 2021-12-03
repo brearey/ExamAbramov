@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamAbramov">
         <activity
-            android:name=".SignupActivity"
+            android:name=".screens.SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".SigninActivity"
+            android:name=".screens.SigninActivity"
             android:exported="false" />
         <activity
-            android:name=".LaunchScreen"
+            android:name=".screens.LaunchScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".screens.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
